@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ButtonLink } from "@/components/button-link";
+import { publicPath } from "@/lib/public-path";
 
 export function People() {
   return (
@@ -24,7 +25,7 @@ export function People() {
         </div>
         <div className="relative">
           <Image
-            src="/images/community.jpg"
+            src={publicPath("/images/community.jpg")}
             alt="Collage of students and teachers studying, graduating, meeting online and working in studios."
             width={496}
             height={483}

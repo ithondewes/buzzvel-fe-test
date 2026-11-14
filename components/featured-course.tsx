@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { courseFacts } from "@/lib/content";
 import { ButtonLink } from "@/components/button-link";
+import { publicPath } from "@/lib/public-path";
 
 export function FeaturedCourse() {
   return (
@@ -12,7 +13,7 @@ export function FeaturedCourse() {
           </p>
           <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] bg-blue-dark">
             <Image
-              src="/images/featured.jpg"
+              src={publicPath("/images/featured.jpg")}
               alt="A designer arranging material samples, sketches and models on a cutting mat."
               fill
               sizes="(max-width: 1024px) 100vw, 560px"
