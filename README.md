@@ -43,7 +43,7 @@ npm start
 
 ## Time spent
 
-**TODO:** Candidate, replace this line with the approximate time you spent.
+About 3 hours (AI-assisted scaffolding with Cursor, plus manual review, testing and adjustments).
 
 ## AI tools used
 
