@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ButtonLink } from "@/components/button-link";
+import { publicPath } from "@/lib/public-path";
 
 export function Hero() {
   return (
@@ -30,7 +31,7 @@ export function Hero() {
           <p className="mt-6 flex items-center gap-3 text-sm text-muted">
             <span className="flex -space-x-2" aria-hidden="true">
               <Image
-                src="/images/alex.jpg"
+                src={publicPath("/images/alex.jpg")}
                 alt=""
                 width={32}
                 height={32}
@@ -54,7 +55,7 @@ export function Hero() {
           />
           <div className="relative aspect-[5/4] overflow-hidden rounded-[1.75rem] bg-[#d7d3cb] shadow-sm">
             <Image
-              src="/images/hero.jpg"
+              src={publicPath("/images/hero.jpg")}
               alt="A learner in a denim jacket working at a laptop, with notes on the wall behind them."
               fill
               preload

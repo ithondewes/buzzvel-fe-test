@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { stats } from "@/lib/content";
+import { publicPath } from "@/lib/public-path";
 
 export function SocialProof() {
   return (
@@ -20,7 +21,7 @@ export function SocialProof() {
           </blockquote>
           <figcaption className="mt-6 flex items-center gap-3">
             <Image
-              src="/images/alex.jpg"
+              src={publicPath("/images/alex.jpg")}
               alt=""
               width={48}
               height={48}

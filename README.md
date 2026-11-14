@@ -4,6 +4,8 @@ A single responsive marketing page for **Luma**, a fictional learning platform, 
 
 The page covers the desktop and mobile frames: header, hero, skill tracks, featured course, “How Luma works”, testimonial and stats, community collage, contact form, closing call to action, and footer.
 
+**Live page:** [https://ithondewes.github.io/buzzvel-fe-test/](https://ithondewes.github.io/buzzvel-fe-test/)
+
 ## Install, run and build
 
 Requirements: Node.js 20.9 or newer.
@@ -18,10 +20,9 @@ Open [http://localhost:3000](http://localhost:3000).
 ```bash
 npm run lint
 npm run build
-npm start
 ```
 
-`npm start` serves the production build.
+`npm run build` writes a static export to `out/`. Local dev and this build are served from `/`. The GitHub Pages workflow sets `NEXT_PUBLIC_BASE_PATH=/buzzvel-fe-test`, which becomes `basePath` and `assetPrefix` so assets resolve on the project site. The contact form and mobile menu are client-side, so they work in the static export.
 
 ## Key decisions
 
@@ -33,6 +34,7 @@ npm start
 - **Type and color.** Headings use Plus Jakarta Sans and body text uses Inter, both loaded with `next/font`. Colors were sampled from the rendered frames (blue `#3157F6`, paper `#F6F5EF`, yellow `#F3E56B`, navy `#161822`). Dev Mode in the file requires an account, so spacing and type sizes were matched by eye rather than copied from the inspect panel.
 - **Step numbers.** The process labels are Step 01, 02 and 03. At the zoom available without Dev Mode the small caps were easy to misread, and sequential numbers match the three stages.
 - **Motion.** Hover and color changes are CSS only. `prefers-reduced-motion: reduce` turns off smooth scrolling and transitions.
+- **Static hosting.** The app is a static export (`output: 'export'`) with `images.unoptimized`, because GitHub Pages has no Next.js server. Image paths are prefixed with `NEXT_PUBLIC_BASE_PATH` only when that variable is set.
 
 ## Known gaps
 
